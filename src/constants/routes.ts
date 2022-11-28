@@ -1,13 +1,10 @@
 //首页
 export const MAIN_PAGE = '/';
 
-//文章列表 `/article/page/${pageNum}`
-export const ARTICLE = '/article';
+//文章列表 `/article/${pageNum}`
+export const ARTICLE_LIST = '/article';
 
-//文章列表 `/article/page/${pageNum}`
-export const ARTICLE_LIST = '/article/page';
-
-//文章详情 `/article/detail/${postsId}`
+//文章详情 `/article/detail/${articleId}`
 export const ARTICLE_DETAIL = '/article/detail';
 
 // 留言板
