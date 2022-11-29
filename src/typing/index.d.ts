@@ -4,3 +4,18 @@ interface IArticleListItemProps {
   articleTitle: string;
   createTime: string;
 }
+interface IArticleTag {
+  tagName: string;
+  color: string;
+  tagId: string;
+}
+
+type IArticleTagsList = Array<IArticleTag>;
+
+interface IArticleType {
+  typeName: string;
+  color: string;
+  typeId: string;
+}
+
+type IArticleTypeList = Array<IArticleType>;
