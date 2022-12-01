@@ -11,7 +11,8 @@ export const getRecommend = () => {
 };
 
 interface IArticleListParams {
-  pageNum: string;
+  pageNum: string | number;
+  pageSize: string | number;
 }
 const QUERY_ARTICLE_LIST_URL = '/api/queryArticleList';
 export const getArticleList = (params: IArticleListParams) => {

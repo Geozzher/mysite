@@ -5,7 +5,7 @@ import { Tag, Image } from 'antd';
 import { Link } from 'umi';
 
 export default function ArticleListItem(props: IArticleListItemProps) {
-  const { id, coverPicture, articleTitle, createTime } = props;
+  const { id, coverPicture, articleTitle, createTime, tag, type } = props;
   return (
     <>
       <div className="article-sort-item">
@@ -25,11 +25,11 @@ export default function ArticleListItem(props: IArticleListItemProps) {
             &nbsp;&nbsp;
             <TagsFilled />
             <span>标签：</span>
-            <Tag color="magenta">ooo1</Tag>
+            <Tag color={tag.color}>{tag.tagName}</Tag>
             &nbsp;&nbsp;
             <CopyOutlined />
             <span>文章类别：</span>
-            <Tag color="blue">日常</Tag>
+            <Tag color={type.color}>{type.typeName}</Tag>
           </span>
           <Link
             className="article-sort-item-info-title"

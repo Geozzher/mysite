@@ -3,6 +3,8 @@ interface IArticleListItemProps {
   coverPicture: string;
   articleTitle: string;
   createTime: string;
+  tag: IArticleTag;
+  type: IArticleType;
 }
 interface IArticleTag {
   tagName: string;
