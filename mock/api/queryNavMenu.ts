@@ -10,7 +10,7 @@ export default {
       },
       {
         id: '0000002',
-        key: '/article',
+        key: '/article/1',
         label: '文章',
       },
       {

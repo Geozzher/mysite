@@ -1,5 +1,5 @@
 import { TagsFilled } from '@ant-design/icons';
-import { Tag } from 'antd';
+import { Tag, Empty } from 'antd';
 import './index.less';
 
 export default function renderArticleTags(tagList: IArticleTagsList) {
@@ -11,14 +11,18 @@ export default function renderArticleTags(tagList: IArticleTagsList) {
           <span>标签墙</span>
         </div>
         <div className="article-tags-wrapper-container">
-          {tagList.map((tagItem) => (
-            <span
-              key={tagItem.tagId}
-              className="article-types-wrapper-container-item"
-            >
-              <Tag color={tagItem.color}>{tagItem.tagName}</Tag>
-            </span>
-          ))}
+          {tagList?.length ? (
+            tagList.map((tagItem) => (
+              <span
+                key={tagItem.tagId}
+                className="article-types-wrapper-container-item"
+              >
+                <Tag color={tagItem.color}>{tagItem.tagName}</Tag>
+              </span>
+            ))
+          ) : (
+            <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
+          )}
         </div>
       </div>
     </>

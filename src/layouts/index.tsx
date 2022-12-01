@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Image, Spin } from 'antd';
+import { Layout, Menu, Image, Spin, BackTop } from 'antd';
 import { useRequest, history } from 'umi';
 import { getNavMenuItems } from '@/service';
 import './index.less';
@@ -28,7 +28,6 @@ const App: React.FC = (props) => {
             defaultSelectedKeys={['2']}
             onClick={(menu) => {
               history.replace(menu.key);
-              console.log('====his', history);
             }}
             items={menuList.map((menu: any) => ({
               key: menu.key,
@@ -37,6 +36,7 @@ const App: React.FC = (props) => {
           />
         </Header>
         <Content className="site-layout-content">
+          <BackTop />
           <div className="site-layout-background">{props.children}</div>
         </Content>
         <Footer className="site-layout-footer">
