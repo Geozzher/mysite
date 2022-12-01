@@ -1,6 +1,6 @@
 export default {
   // 支持值为 Object 和 Array
-  'GET /api/queryRecommend': {
+  'GET /api/recommend/query.json': {
     stat: 'ok',
     data: [
       {

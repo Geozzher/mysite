@@ -8,4 +8,10 @@ export default defineConfig({
   fastRefresh: {},
   mfsu: {},
   lessLoader: {},
+  proxy: {
+    // '/api': {
+    //   target: 'http://localhost:3000',
+    //   changeOrigin: true,
+    // },
+  },
 });

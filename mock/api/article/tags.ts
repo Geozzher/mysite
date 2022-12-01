@@ -1,6 +1,6 @@
 export default {
   // 支持值为 Object 和 Array
-  'GET /api/queryTags': {
+  'GET /api/article/tags.json': {
     stat: 'ok',
     data: [
       { tagName: 'tag0001', tagId: '1001', color: 'blue' },

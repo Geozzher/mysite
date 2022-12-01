@@ -1,6 +1,6 @@
 export default {
   // 支持值为 Object 和 Array
-  'GET /api/queryArticleTypes': {
+  'GET /api/article/type.json': {
     stat: 'ok',
     data: [
       { typeName: '标签', typeId: 1001, color: '#1167ff' },

@@ -1,30 +1,33 @@
+import {
+  API_NAV_LIST,
+  API_QUERY_RECOMMEND,
+  API_ARTICLE_LIST,
+  API_ARTICLE_TYPE,
+  API_ARTICLE_TAGS,
+} from '@/constants';
 import { get } from '@/utils';
 
-const QUERY_NAVGATION_URL = '/api/queryNavMenu';
 export const getNavMenuItems = () => {
-  return get(QUERY_NAVGATION_URL);
+  return get(API_NAV_LIST);
 };
 
-const QUERY_RECOMMEND_URL = '/api/queryRecommend';
 export const getRecommend = () => {
-  return get(QUERY_RECOMMEND_URL);
+  return get(API_QUERY_RECOMMEND);
 };
 
 interface IArticleListParams {
   pageNum: string | number;
   pageSize: string | number;
 }
-const QUERY_ARTICLE_LIST_URL = '/api/queryArticleList';
+
 export const getArticleList = (params: IArticleListParams) => {
-  return get(QUERY_ARTICLE_LIST_URL, params);
+  return get(API_ARTICLE_LIST, params);
 };
 
-const QUERY_ARTICLE_TYPE_URL = '/api/queryArticleTypes';
 export const getArticleTypes = () => {
-  return get(QUERY_ARTICLE_TYPE_URL);
+  return get(API_ARTICLE_TYPE);
 };
 
-const QUERY_ARTICLE_TAGS_URL = '/api/queryTags';
 export const getTags = () => {
-  return get(QUERY_ARTICLE_TAGS_URL);
+  return get(API_ARTICLE_TAGS);
 };
