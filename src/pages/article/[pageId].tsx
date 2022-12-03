@@ -1,7 +1,7 @@
 import './index.less';
 import { Spin, Affix, Pagination, Empty } from 'antd';
 import { history, useParams, useRequest } from 'umi';
-import { getArticleList, getArticleTypes, getTags } from '@/service';
+import { getArticleList, getArticleTypes, getArticleTags } from '@/service';
 import ArticleListItem from '@/components/ArticleListItem';
 import ArticleTypes from '@/components/ArticleTypes';
 import ArticleTags from '@/components/ArticleTags';
@@ -21,7 +21,7 @@ export default function Article() {
     { refreshDeps: [pageNum] },
   );
   const { data: typeList = [] } = useRequest(getArticleTypes);
-  const { data: tagList = [] } = useRequest(getTags);
+  const { data: tagList = [] } = useRequest(getArticleTags);
 
   const handleOnPageNumChange = (pageNum: number, pageSize: number) => {
     setPageNum(String(pageNum));

@@ -4,6 +4,7 @@ import {
   API_ARTICLE_LIST,
   API_ARTICLE_TYPE,
   API_ARTICLE_TAGS,
+  API_ARTICLE_DETAIL,
 } from '@/constants';
 import { get } from '@/utils';
 
@@ -28,6 +29,14 @@ export const getArticleTypes = () => {
   return get(API_ARTICLE_TYPE);
 };
 
-export const getTags = () => {
+export const getArticleTags = () => {
   return get(API_ARTICLE_TAGS);
+};
+
+interface IArticleDetailParams {
+  articleId: string | number;
+}
+
+export const getArticleDetail = (params: IArticleDetailParams) => {
+  return get(API_ARTICLE_DETAIL, params);
 };

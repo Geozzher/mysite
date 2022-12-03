@@ -6,7 +6,7 @@ export default defineConfig({
   },
   // routes: [{ path: '/', component: '@/pages/index' }],
   fastRefresh: {},
-  mfsu: {},
+  // mfsu: {},
   lessLoader: {},
   proxy: {
     // '/api': {
