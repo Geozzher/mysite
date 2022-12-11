@@ -7,17 +7,19 @@ interface IArticleListItemProps {
   type: IArticleType;
 }
 interface IArticleTag {
-  tagName: string;
+  label: string;
+  name: string;
   color: string;
-  tagId: string;
+  id: string;
 }
 
 type IArticleTagsList = Array<IArticleTag>;
 
 interface IArticleType {
-  typeName: string;
+  label: string;
+  name: string;
   color: string;
-  typeId: string;
+  id: string;
 }
 
 type IArticleTypeList = Array<IArticleType>;

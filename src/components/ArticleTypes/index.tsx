@@ -14,10 +14,10 @@ export default function render0ArticleTypes(typeList: IArticleTypeList) {
           {typeList?.length ? (
             typeList.map((typeItem) => (
               <span
-                key={typeItem.typeId}
+                key={typeItem.id}
                 className="article-types-wrapper-container-item"
               >
-                <Tag color={typeItem.color}>{typeItem.typeName}</Tag>
+                <Tag color={typeItem.color}>{typeItem.label}</Tag>
               </span>
             ))
           ) : (

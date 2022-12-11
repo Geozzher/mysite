@@ -30,7 +30,7 @@ const App: React.FC = (props) => {
               history.replace(menu.key);
             }}
             items={menuList.map((menu: any) => ({
-              key: menu.key,
+              key: menu.path,
               label: menu.label,
             }))}
           />

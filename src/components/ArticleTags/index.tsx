@@ -14,10 +14,10 @@ export default function renderArticleTags(tagList: IArticleTagsList) {
           {tagList?.length ? (
             tagList.map((tagItem) => (
               <span
-                key={tagItem.tagId}
+                key={tagItem.id}
                 className="article-types-wrapper-container-item"
               >
-                <Tag color={tagItem.color}>{tagItem.tagName}</Tag>
+                <Tag color={tagItem.color}>{tagItem.label}</Tag>
               </span>
             ))
           ) : (

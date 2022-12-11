@@ -25,11 +25,11 @@ export default function ArticleListItem(props: IArticleListItemProps) {
             &nbsp;&nbsp;
             <TagsFilled />
             <span>标签：</span>
-            <Tag color={tag.color}>{tag.tagName}</Tag>
+            <Tag color={tag.color}>{tag.name}</Tag>
             &nbsp;&nbsp;
             <CopyOutlined />
             <span>文章类别：</span>
-            <Tag color={type.color}>{type.typeName}</Tag>
+            <Tag color={type.color}>{type.name}</Tag>
           </span>
           <Link
             className="article-sort-item-info-title"
