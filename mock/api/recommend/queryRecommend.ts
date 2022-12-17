@@ -6,27 +6,40 @@ export default {
       {
         id: '0000001',
         title: '敬请期待',
-        content: '新功能开发中，敬请期待。新功能开发中，敬请期待。',
-        href: 'https://baidu.com',
+        gotoText: '了解更多',
+        gotoUrl: 'https://baidu.com',
+        description: '新功能开发中，敬请期待。新功能开发中，敬请期待。',
       },
       {
         id: '0000002',
         title: '敬请期待',
-        content: '新功能开发中，敬请期待。新功能开发中，敬请期待。',
-        href: 'www.baidu.com',
+        gotoText: '了解更多',
+        gotoUrl: 'www.baidu.com',
+        description:
+          '<div>新功能<a>开发中</a>，敬请期待。新功能开发中，敬请期待。</div>',
       },
       {
         id: '0000003',
         title: '敬请期待',
-        content: '新功能开发中，敬请期待。',
-        href: './',
+        gotoText: '去看看',
+        gotoUrl: './',
+        description:
+          '<div>新功能<a>开发中</a>，敬请期待。新功能开发中，敬请期待。</div>',
       },
-      {
-        id: '0000004',
-        title: '敬请期待',
-        content: '新功能开发中，敬请期待。',
-        href: './',
-      },
+      // {
+      //   id: '0000004',
+      //   title: '敬请期待',
+      //   gotoText: '了解更多',
+      //   description: '新功能开发中，敬请期待。',
+      //   gotoUrl: './',
+      // },
+      // {
+      //   id: '0000003',
+      //   title: '敬请期待',
+      //   gotoText: '了解更多',
+      //   description: '新功能开发中，敬请期待。',
+      //   gotoUrl: './',
+      // },
     ],
   },
 };

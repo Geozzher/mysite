@@ -20,10 +20,15 @@ export default function mainPage() {
                 className="recommend-card-item"
                 title={recommendItem.title}
                 key={recommendItem.id}
-                extra={<a href={recommendItem.href}>了解更多</a>}
-                style={{ width: 300 }}
+                extra={
+                  <a href={recommendItem.gotoUrl}>{recommendItem.gotoText}</a>
+                }
               >
-                <p>{recommendItem.content}</p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: recommendItem.description,
+                  }}
+                ></div>
               </Card>
             );
           })}

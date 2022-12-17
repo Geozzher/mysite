@@ -1,6 +1,6 @@
 export default {
   // 支持值为 Object 和 Array
-  'GET /api/nav/query1.json': {
+  'GET /api/nav/query.json': {
     code: 0,
     stat: 'ok',
     msg: 'success',
