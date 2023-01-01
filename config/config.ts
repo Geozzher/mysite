@@ -1,4 +1,5 @@
 import { defineConfig } from 'umi';
+import { routes } from './routes';
 
 export default defineConfig({
   nodeModulesTransform: {
@@ -14,9 +15,11 @@ export default defineConfig({
     mode: 'string',
     // staticMarkup: false,
   },
+  routes,
+  mock: false,
   proxy: {
     '/api': {
-      target: 'http://localhost:3004',
+      target: 'http://wfhcc.cn:3004',
       changeOrigin: true,
       pathRewrite: {
         '^/api': '',

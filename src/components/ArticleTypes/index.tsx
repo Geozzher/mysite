@@ -1,30 +1,20 @@
 import { CopyOutlined } from '@ant-design/icons';
-import { Tag, Empty } from 'antd';
+import { Tag } from 'antd';
+import ArticleRightContainer from '../ArticleRightContainer';
 import './index.less';
 
 export default function render0ArticleTypes(typeList: IArticleTypeList) {
   return (
     <>
-      <div className="article-types-wrapper">
-        <div className="article-types-wrapper-title">
-          <CopyOutlined />
-          <span>文章类别</span>
-        </div>
-        <div className="article-types-wrapper-container">
-          {typeList?.length ? (
-            typeList.map((typeItem) => (
-              <span
-                key={typeItem.id}
-                className="article-types-wrapper-container-item"
-              >
-                <Tag color={typeItem.color}>{typeItem.label}</Tag>
+      <ArticleRightContainer icon={<CopyOutlined />} title="文章类别">
+        {typeList.length
+          ? typeList.map((tagItem) => (
+              <span key={tagItem.id} className="article-tags-item">
+                <Tag color={tagItem.color}>{tagItem.label}</Tag>
               </span>
             ))
-          ) : (
-            <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
-          )}
-        </div>
-      </div>
+          : ''}
+      </ArticleRightContainer>
     </>
   );
 }

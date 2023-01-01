@@ -1,10 +1,27 @@
 interface IArticleListItemProps {
   id: string;
-  coverPicture: string;
-  articleTitle: string;
-  createTime: string;
-  tag: IArticleTag;
-  type: IArticleType;
+  title: string;
+  introduce: string;
+  types: IArticleTypeInArticle;
+  tags: Array<IArticleTagInArticle>;
+  cover: string;
+  content_raw: string;
+  content_html: string;
+  visited_counts: number;
+  liked_counts: number;
+  is_show: boolean;
+  created_at: string;
+  updated_at: string;
+}
+interface IArticleTagInArticle {
+  label: string;
+  value: string;
+  key: string;
+}
+interface IArticleTypeInArticle {
+  label: string;
+  value: string;
+  key: string;
 }
 interface IArticleTag {
   label: string;

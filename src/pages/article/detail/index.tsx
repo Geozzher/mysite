@@ -8,14 +8,16 @@ interface IArticleDetailParams {
 
 export default function ArticleDetail() {
   const { articleId }: IArticleDetailParams = useParams();
-  const { data, loading } = useRequest(() => getArticleDetail({ articleId }));
+  const { data, loading } = useRequest(() =>
+    getArticleDetail({ id: articleId }),
+  );
 
   return (
     <Spin spinning={loading}>
       <div className="article-wrapper">
         <div className="article-wrapper-left">
           <div
-            className="article-list-container"
+            className="article-container"
             dangerouslySetInnerHTML={{ __html: data?.content_html }}
           ></div>
         </div>

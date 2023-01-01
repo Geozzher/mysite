@@ -1,6 +1,6 @@
 export default {
   // 支持值为 Object 和 Array
-  'GET /api/article/list.json': {
+  'GET /api/article/getArticleList.json': {
     stat: 'ok',
     data: {
       pagenationInfo: {

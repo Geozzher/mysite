@@ -17,7 +17,7 @@ export const getRecommend = () => {
 };
 
 interface IArticleListParams {
-  pageNum: string | number;
+  current: string | number;
   pageSize: string | number;
 }
 
@@ -34,7 +34,7 @@ export const getArticleTags = () => {
 };
 
 interface IArticleDetailParams {
-  articleId: string | number;
+  id: string | number;
 }
 
 export const getArticleDetail = (params: IArticleDetailParams) => {

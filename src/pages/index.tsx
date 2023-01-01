@@ -21,7 +21,7 @@ export default function mainPage() {
                 title={recommendItem.title}
                 key={recommendItem.id}
                 extra={
-                  <a href={recommendItem.gotoUrl}>{recommendItem.gotoText}</a>
+                  <a href={recommendItem.goto_url}>{recommendItem.goto_text}</a>
                 }
               >
                 <div

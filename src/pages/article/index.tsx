@@ -7,6 +7,7 @@ import ArticleTypes from '@/components/ArticleTypes';
 import ArticleTags from '@/components/ArticleTags';
 import { useState } from 'react';
 import { ARTICLE_LIST } from '@/constants';
+import ArticleMusic from '@/components/ArticleMusic';
 
 interface IArticleListPageParams {
   pageId: string;
@@ -17,7 +18,7 @@ export default function Article() {
   const [pageNum, setPageNum] = useState<string>(pageId);
   const [pageSize] = useState<number>(15);
   const { data, loading } = useRequest(
-    () => getArticleList({ pageNum: pageId, pageSize }),
+    () => getArticleList({ current: pageId, pageSize }),
     { refreshDeps: [pageNum] },
   );
   const { data: typeList = [] } = useRequest(getArticleTypes);
@@ -33,9 +34,9 @@ export default function Article() {
       <div className="article-wrapper">
         <div className="article-wrapper-left">
           <div className="article-list-container">
-            {data?.dataList.length ? (
+            {data?.list.length ? (
               <div>
-                {data.dataList.map((listItem: IArticleListItemProps) => {
+                {data.list.map((listItem: IArticleListItemProps) => {
                   return (
                     <ArticleListItem
                       key={listItem.id}
@@ -48,7 +49,7 @@ export default function Article() {
                   <Pagination
                     className="article-list-pagenation"
                     current={Number(pageNum)}
-                    total={data?.pagenationInfo.total}
+                    total={data?.pageInfo.total}
                     pageSize={pageSize}
                     showSizeChanger={false}
                     showTotal={(total) => `共${total}页`}
@@ -63,10 +64,11 @@ export default function Article() {
           </div>
         </div>
         <div className="article-wrapper-right">
-          <Affix offsetTop={64}>
+          <Affix offsetTop={64} className="article-wrapper-right-affix">
             <div>
               {ArticleTypes(typeList)}
               {ArticleTags(tagList)}
+              {ArticleMusic()}
               {/* <ContactMe></ContactMe> */}
             </div>
           </Affix>
