@@ -5,6 +5,8 @@ import {
   API_ARTICLE_TYPE,
   API_ARTICLE_TAGS,
   API_ARTICLE_DETAIL,
+  API_ARTICLE_VIEWS,
+  API_TRACERT,
 } from '@/constants';
 import { get } from '@/utils';
 
@@ -39,4 +41,12 @@ interface IArticleDetailParams {
 
 export const getArticleDetail = (params: IArticleDetailParams) => {
   return get(API_ARTICLE_DETAIL, params);
+};
+
+export const updateArticleView = (params: IArticleDetailParams) => {
+  return get(API_ARTICLE_VIEWS, params);
+};
+
+export const tracert = (key: string) => {
+  return get(API_TRACERT, { key });
 };

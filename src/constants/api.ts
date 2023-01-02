@@ -7,3 +7,7 @@ export const API_NAV_LIST = '/api/nav/query.json';
 
 export const API_QUERY_RECOMMEND =
   '/api/recommendation/queryRecommendation.json';
+
+export const API_TRACERT = '/api/statistic/updateViewCounts.json';
+
+export const API_ARTICLE_VIEWS = '/api/article/updateViews.json';

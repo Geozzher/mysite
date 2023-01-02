@@ -1,4 +1,5 @@
-import { getArticleDetail } from '@/service';
+import { T_F_ARTICLE_DETAIL } from '@/constants';
+import { getArticleDetail, tracert, updateArticleView } from '@/service';
 import { Skeleton } from 'antd';
 import { useParams, useRequest } from 'umi';
 import './index.less';
@@ -9,9 +10,11 @@ interface IArticleDetailParams {
 
 export default function ArticleDetail() {
   const { articleId }: IArticleDetailParams = useParams();
-  const { data, loading } = useRequest(() =>
-    getArticleDetail({ id: articleId }),
-  );
+  const { data, loading } = useRequest(() => {
+    tracert(T_F_ARTICLE_DETAIL);
+    updateArticleView({ id: articleId });
+    return getArticleDetail({ id: articleId });
+  });
 
   return (
     <Skeleton loading={loading} active={true}>
@@ -22,10 +25,10 @@ export default function ArticleDetail() {
             <div className="article-sub-description">
               <div className="article-time">
                 <div className="article-time-created">
-                  创建时间:{data?.created_at}
+                  文章创建时间：{data?.created_at}
                 </div>
                 <div className="article-time-updated">
-                  最新修改时间:{data?.updated_at}
+                  最新修改时间：{data?.updated_at}
                 </div>
               </div>
             </div>

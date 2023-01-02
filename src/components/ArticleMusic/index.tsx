@@ -1,8 +1,7 @@
-//music.163.com/outchain/player?type=2&id=1842025914&auto=1&height=66
-
 import { SoundFilled } from '@ant-design/icons';
 import './index.less';
 import ArticleRightContainer from '../ArticleRightContainer';
+import { WY_MUSIC_1842025914 } from '@/constants';
 
 export default function ArticleMusic() {
   return (
@@ -14,7 +13,7 @@ export default function ArticleMusic() {
           marginHeight={0}
           width="330"
           height="86"
-          src="//music.163.com/outchain/player?type=2&id=1842025914&auto=1&height=66"
+          src={WY_MUSIC_1842025914}
         ></iframe>
       </ArticleRightContainer>
     </>

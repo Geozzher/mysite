@@ -1,12 +1,17 @@
 import './index.less';
 import { Skeleton, Affix, Pagination, Empty } from 'antd';
 import { history, useParams, useRequest } from 'umi';
-import { getArticleList, getArticleTypes, getArticleTags } from '@/service';
+import {
+  getArticleList,
+  getArticleTypes,
+  getArticleTags,
+  tracert,
+} from '@/service';
 import ArticleListItem from '@/components/ArticleListItem';
 import ArticleTypes from '@/components/ArticleTypes';
 import ArticleTags from '@/components/ArticleTags';
 import { useState } from 'react';
-import { ARTICLE_LIST } from '@/constants';
+import { ARTICLE_LIST, T_F_ARTICLE_LIST } from '@/constants';
 import ArticleMusic from '@/components/ArticleMusic';
 
 interface IArticleListPageParams {
@@ -18,7 +23,10 @@ export default function Article() {
   const [pageNum, setPageNum] = useState<string>(pageId);
   const [pageSize] = useState<number>(15);
   const { data, loading } = useRequest(
-    () => getArticleList({ current: pageId, pageSize }),
+    () => {
+      tracert(T_F_ARTICLE_LIST);
+      return getArticleList({ current: pageId, pageSize });
+    },
     { refreshDeps: [pageNum] },
   );
   const { data: typeList = [] } = useRequest(getArticleTypes);
