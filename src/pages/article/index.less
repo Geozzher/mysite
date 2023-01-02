@@ -12,6 +12,15 @@
 
   &-right {
     flex: 1;
+
+    &-affix {
+      display: block;
+    }
+
+    &-mobile {
+      display: none;
+    }
+
   }
 }
 
@@ -22,7 +31,7 @@
     margin: 0 24px;
     padding: 24px;
     background: #fff;
-    border-radius: 5px;
+    border-radius: @--radius-corner-normal;
     background-color: #f5f9fb;
     box-shadow: 0 3px 8px 6px rgb(7 17 27 / 5%);
   }
@@ -40,15 +49,15 @@
     position: relative;
     margin: 0 auto;
     padding: 15px 20px;
+    min-width: 375px;
 
     &-right {
-      .ant-affix {
-        position: relative !important;
-        z-index: 0;
-        height: 100% !important;
-        top: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
+      &-affix {
+        display: none;
+      }
+
+      &-mobile {
+        display: block;
       }
     }
   }
@@ -60,7 +69,7 @@
       margin: 0;
       padding: 0;
       background: #fff;
-      border-radius: 5px;
+      border-radius: @--radius-corner-normal;
       background-color: #f5f9fb;
       box-shadow: 0 3px 8px 6px rgb(7 17 27 / 5%);
     }

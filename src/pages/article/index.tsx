@@ -1,5 +1,5 @@
 import './index.less';
-import { Spin, Affix, Pagination, Empty } from 'antd';
+import { Skeleton, Affix, Pagination, Empty } from 'antd';
 import { history, useParams, useRequest } from 'umi';
 import { getArticleList, getArticleTypes, getArticleTags } from '@/service';
 import ArticleListItem from '@/components/ArticleListItem';
@@ -30,7 +30,7 @@ export default function Article() {
   };
 
   return (
-    <Spin spinning={loading}>
+    <Skeleton loading={loading} active={true}>
       <div className="article-wrapper">
         <div className="article-wrapper-left">
           <div className="article-list-container">
@@ -66,14 +66,20 @@ export default function Article() {
         <div className="article-wrapper-right">
           <Affix offsetTop={64} className="article-wrapper-right-affix">
             <div>
+              {ArticleMusic()}
               {ArticleTypes(typeList)}
               {ArticleTags(tagList)}
-              {ArticleMusic()}
               {/* <ContactMe></ContactMe> */}
             </div>
           </Affix>
+          <div className="article-wrapper-right-mobile">
+            {ArticleMusic()}
+            {ArticleTypes(typeList)}
+            {ArticleTags(tagList)}
+            {/* <ContactMe></ContactMe> */}
+          </div>
         </div>
       </div>
-    </Spin>
+    </Skeleton>
   );
 }

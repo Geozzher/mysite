@@ -1,8 +1,50 @@
 .article {
   &-container {
     max-width: 1000px;
-    height: 1200px;
-    margin: 12px 20% 0;
-    background: rgb(121, 242, 157);
   }
+
+  &-title {
+    font-size: @--size-24;
+    line-height: @--size-24;
+    margin: @--size-24 auto @--size-6;
+  }
+
+  &-sub-description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-time {
+    display: flex;
+    flex-direction: row;
+    padding: @--size-12 0;
+
+    &-created {
+      font-size: @--size-5;
+      color: @--color-99;
+    }
+
+    &-updated {
+      margin-left: @--size-12;
+      font-size: @--size-5;
+      color: @--color-99;
+    }
+  }
+
+  &-content {
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .article {
+    &-time {
+      flex-direction: column;
+
+      &-updated {
+        margin-left: 0;
+      }
+    }
+  }
+
 }

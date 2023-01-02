@@ -1,12 +1,18 @@
 import { defineConfig } from 'umi';
 import { routes } from './routes';
+import path from 'path';
 
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
   fastRefresh: {},
-  lessLoader: {},
+  lessLoader: {
+    modifyVars: {
+      hack: `true;
+        @import "${path.join(__dirname, '../src/theme/normal/index.less')}";`,
+    },
+  },
   ssr: {
     // 更多配置
     // forceInitial: false,

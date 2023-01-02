@@ -23,9 +23,8 @@ const App: React.FC = (props) => {
         >
           <div className="logo" />
           <Menu
-            theme="dark"
             mode="horizontal"
-            defaultSelectedKeys={['2']}
+            theme="dark"
             onClick={(menu) => {
               history.replace(menu.key);
             }}
