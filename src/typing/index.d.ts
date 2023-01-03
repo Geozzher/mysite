@@ -11,7 +11,7 @@ interface IArticleListItemProps {
   liked_counts: number;
   is_show: boolean;
   created_at: string;
-  updated_at: string;
+  article_updated_at: string;
 }
 interface IArticleTagInArticle {
   label: string;

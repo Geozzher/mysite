@@ -28,7 +28,7 @@ export default function ArticleDetail() {
                   文章创建时间：{data?.created_at}
                 </div>
                 <div className="article-time-updated">
-                  最新修改时间：{data?.updated_at}
+                  最新修改时间：{data?.article_updated_at}
                 </div>
               </div>
             </div>

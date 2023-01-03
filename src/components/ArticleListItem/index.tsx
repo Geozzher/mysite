@@ -5,7 +5,7 @@ import { Tag, Image } from 'antd';
 import { Link } from 'umi';
 
 export default function ArticleListItem(props: IArticleListItemProps) {
-  const { id, cover, title, updated_at, tags, types } = props;
+  const { id, cover, title, article_updated_at, tags, types } = props;
   return (
     <>
       <div className="article-sort-item">
@@ -23,7 +23,7 @@ export default function ArticleListItem(props: IArticleListItemProps) {
             <div className="article-sort-item-info-item">
               <CalendarOutlined />
               <span>最近更新时间：</span>
-              <time>{updated_at}</time>
+              <time>{article_updated_at}</time>
             </div>
             <div className="article-sort-item-info-item">
               <span>文章类别：{types.label}</span>
