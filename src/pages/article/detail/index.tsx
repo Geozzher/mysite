@@ -18,8 +18,8 @@ export default function ArticleDetail() {
 
   return (
     <Skeleton loading={loading} active={true}>
-      <div className="article-wrapper">
-        <div className="article-wrapper-left">
+      <div className="article-detail-wrapper">
+        <div className="article-detail-wrapper-left">
           <div className="article-container">
             <div className="article-title">{data?.title}</div>
             <div className="article-sub-description">

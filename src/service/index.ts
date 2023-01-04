@@ -7,6 +7,7 @@ import {
   API_ARTICLE_DETAIL,
   API_ARTICLE_VIEWS,
   API_TRACERT,
+  API_CONFIG,
 } from '@/constants';
 import { get } from '@/utils';
 
@@ -49,4 +50,8 @@ export const updateArticleView = (params: IArticleDetailParams) => {
 
 export const tracert = (key: string) => {
   return get(API_TRACERT, { key });
+};
+
+export const gettracertconfig = () => {
+  return get(API_CONFIG);
 };

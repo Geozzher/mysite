@@ -31,5 +31,12 @@ export default defineConfig({
         '^/api': '',
       },
     },
+    '/config': {
+      target: 'https://wfhcc.cn:8002',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/config': '',
+      },
+    },
   },
 });

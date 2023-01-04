@@ -11,3 +11,5 @@ export const API_QUERY_RECOMMEND =
 export const API_TRACERT = '/api/statistic/updateViewCounts.json';
 
 export const API_ARTICLE_VIEWS = '/api/article/updateViews.json';
+
+export const API_CONFIG = 'config/mysite/tracert-field-map.json';
