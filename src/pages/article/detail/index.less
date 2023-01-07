@@ -6,7 +6,11 @@
     max-width: 1100px;
   }
 
-  &-container {}
+  &-container {
+    .ant-typography {
+      margin: 0;
+    }
+  }
 
   &-title {
     font-size: @--size-24;
@@ -76,7 +80,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .article {
     &-content {
       min-height: calc(100vh - 280px);

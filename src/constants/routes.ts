@@ -12,3 +12,6 @@ export const BOARD = '/board';
 
 //3d相册
 export const ALBUM = '/3dalbum';
+
+//404
+export const NOT_FOUND = '/404';
