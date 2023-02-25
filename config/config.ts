@@ -14,7 +14,6 @@ export default defineConfig({
     },
   },
   ssr: {
-    // 更多配置
     // forceInitial: false,
     removeWindowInitialProps: false,
     devServerRender: true,
