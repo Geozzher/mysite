@@ -19,7 +19,6 @@ export default defineConfig({
     removeWindowInitialProps: false,
     devServerRender: true,
     mode: 'string',
-    // staticMarkup: false,
   },
   routes,
   mock: false,
