@@ -39,7 +39,9 @@ const App: React.FC = (props) => {
           <div className="site-layout-background">{props.children}</div>
         </Content>
         <Footer className="site-layout-footer">
-          <a> 皖ICP备2021017265号</a>
+          <a href="https://beian.miit.gov.cn/" target="_blank">
+            皖ICP备2021017265号
+          </a>
           <a>
             <span>
               <Image src={beian} alt="error" width={12} height={12} />
